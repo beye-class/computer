@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>崇德國小中年級資訊教室教學網</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f0f9ff;
+        }
+
+        .kids-title {
+            font-family: 'ZCOOL KuaiLe', 'Noto Sans TC', cursive;
+        }
+
+        .blob-bg {
+            background-image: radial-gradient(#e0f2fe 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+
+        .card-pop {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-pop:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        .curvy-divider {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            clip-path: ellipse(50% 100% at 50% 100%);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="blob-bg">
+
+    <!-- 導覽列 -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-yellow-400">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-yellow-400 p-2 rounded-2xl rotate-3 shadow-md">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <span class="kids-title text-2xl font-bold text-blue-600 tracking-wider">
+                        崇德資訊小玩家
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#rules" class="bg-orange-100 hover:bg-orange-200 text-orange-600 px-4 py-2 rounded-full font-bold transition">🎮 教室規則</a>
+                    <a href="#courses" class="bg-blue-100 hover:bg-blue-200 text-blue-600 px-4 py-2 rounded-full font-bold transition">🌟 精選課程</a>
+                    <a href="#links" class="bg-green-100 hover:bg-green-200 text-green-600 px-4 py-2 rounded-full font-bold transition">🔗 常用連結</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <header class="relative bg-blue-500 overflow-hidden py-16 md:py-24">
+        <!-- 裝飾元素 -->
+        <div class="absolute top-10 left-10 opacity-20 floating" style="animation-delay: 0.5s;">
+            <i class="fas fa-cloud text-white text-9xl"></i>
+        </div>
+        <div class="absolute bottom-10 right-10 opacity-20 floating">
+            <i class="fas fa-star text-yellow-300 text-8xl rotate-12"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <div class="inline-block bg-white/20 backdrop-blur-sm rounded-3xl p-8 mb-8 border-2 border-white/30">
+                <h1 class="kids-title text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
+                    哈囉！小小資訊冒險家
+                </h1>
+                <p class="text-white text-xl md:text-2xl font-medium opacity-95">
+                    準備好跟我們一起進入電腦的神奇世界了嗎？✨
+                </p>
+            </div>
+            <div class="flex justify-center">
+                <a href="#courses" class="bg-yellow-400 hover:bg-yellow-300 text-blue-900 text-2xl font-black px-12 py-5 rounded-3xl shadow-[0_10px_0_rgb(202,138,4)] active:shadow-none active:translate-y-2 transition-all">
+                    開始冒險吧！🚀
+                </a>
+            </div>
+        </div>
+        <!-- 底部波浪 -->
+        <div class="absolute bottom-0 w-full overflow-hidden leading-[0]">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px] fill-gray-50">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- 教室規則區塊 -->
+    <section id="rules" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="kids-title text-4xl text-gray-800 mb-4">🏆 教室小管家</h2>
+            <p class="text-gray-500 mb-16 text-lg">大家一起遵守，我們就有超棒的教室！</p>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-white p-10 rounded-[40px] shadow-xl border-b-8 border-blue-400 card-pop relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-blue-400 rounded-3xl rotate-12 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-cookie-bite text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8 text-blue-600">小肚肚忍忍</h3>
+                    <p class="text-gray-600">為了電腦寶貝的健康，教室裡不吃東西也不喝飲料喔！🍰❌</p>
+                </div>
+                <div class="bg-white p-10 rounded-[40px] shadow-xl border-b-8 border-yellow-400 card-pop relative md:mt-4">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-yellow-400 rounded-3xl -rotate-6 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-volume-down text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8 text-yellow-600">耳朵小聲聽</h3>
+                    <p class="text-gray-600">輕輕說話、慢慢走，讓我們能專心地在知識大海裡游泳。🤫🌊</p>
+                </div>
+                <div class="bg-white p-10 rounded-[40px] shadow-xl border-b-8 border-green-400 card-pop relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-green-400 rounded-3xl rotate-6 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-power-off text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8 text-green-600">電腦要睡覺</h3>
+                    <p class="text-gray-600">下課前乖乖幫電腦關機，把桌椅收齊，當個收納小達人！💤✅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課程介紹區塊 -->
+    <section id="courses" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="kids-title text-5xl text-blue-600 mb-4">🌈 闖關大冒險</h2>
+                <p class="text-gray-600 text-lg">每一關都有驚喜，快來挑戰吧！</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 課程卡片 1 -->
+                <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-indigo-400">
+                    <div class="h-48 bg-indigo-50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-keyboard text-7xl text-indigo-400 transition-transform group-hover:scale-125 duration-500"></i>
+                        <div class="absolute -bottom-2 -right-2 text-indigo-100"><i class="fas fa-bolt text-9xl"></i></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4">快樂鍵盤大師</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed">認識鍵盤上的每個按鈕，學會手指跳舞的最強組合技！</p>
+                        <a href="https://beye-class.github.io/keyboard-master/" target="_blank" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 rounded-2xl transition">
+                            進入挑戰 🎯
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 課程卡片 2 -->
+                <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-purple-400">
+                    <div class="h-48 bg-purple-50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-gamepad text-7xl text-purple-400 transition-transform group-hover:rotate-12 duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4">鍵盤急速光</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed">用你的手指光速挑戰小遊戲，比比看誰是快手小達人！</p>
+                        <a href="https://beyelin6-my-keyboard-game.vercel.app/" target="_blank" class="block text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-2xl transition">
+                            開始比賽 🏁
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 課程卡片 3 -->
+                <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-pink-400">
+                    <div class="h-48 bg-pink-50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-envelope-open text-7xl text-pink-400 transition-transform group-hover:-translate-y-4 group-hover:translate-x-4 duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4">認識電子郵件信箱</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed">學會 Google Mail 秘密網域，掌握數位溝通的基本輸入技巧！</p>
+                        <a href="https://beye-class.github.io/googlemail/" target="_blank" class="block text-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-2xl transition">
+                            進入學習 💌
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 課程卡片 4 -->
+                <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-orange-400">
+                    <div class="h-48 bg-orange-50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-puzzle-piece text-7xl text-orange-400 transition-transform group-hover:scale-90 duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4">資訊小遊戲</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed">邊玩遊戲邊動腦，讓你的鍵盤指法既精準又快速！</p>
+                        <a href="https://cdps02.my.canva.site/coputer001" target="_blank" class="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-2xl transition">
+                            玩樂趣 🍦
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常用連結區塊 -->
+    <section id="links" class="py-24 bg-blue-600 relative overflow-hidden">
+        <!-- 裝飾背景圓圈 -->
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="kids-title text-4xl text-white mb-12">🎒 工具百寶箱</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="https://classroom.google.com" target="_blank" class="bg-white p-8 rounded-[30px] shadow-2xl hover:-translate-y-2 transition flex flex-col items-center w-64 group">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-green-500 transition">
+                        <i class="fab fa-google text-4xl text-green-600 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-xl font-black text-gray-800">線上教室</span>
+                </a>
+                <a href="https://scratch.mit.edu" target="_blank" class="bg-white p-8 rounded-[30px] shadow-2xl hover:-translate-y-2 transition flex flex-col items-center w-64 group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
+                        <i class="fas fa-cat text-4xl text-orange-600 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-xl font-black text-gray-800">積木程式</span>
+                </a>
+                <a href="https://www.canva.com" target="_blank" class="bg-white p-8 rounded-[30px] shadow-2xl hover:-translate-y-2 transition flex flex-col items-center w-64 group">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
+                        <i class="fas fa-paint-brush text-4xl text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-xl font-black text-gray-800">創意設計</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-8 floating">
+                <i class="fas fa-heart text-red-500 text-4xl"></i>
+            </div>
+            <p class="text-white text-lg font-bold mb-2">© 2026 崇德國小資訊教室</p>
+            <p class="text-gray-500 text-sm">每個小朋友都是最棒的數位創作者！✨</p>
+            <div class="mt-8 border-t border-gray-800 pt-8">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=computer" alt="機器人插圖" class="w-16 h-16 mx-auto mb-4 grayscale opacity-30">
+                <p class="text-xs text-gray-600">由 Gemini 小幫手為大家加油打氣</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 簡單的平滑滾動偏移修正
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
