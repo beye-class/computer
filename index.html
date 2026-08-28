@@ -46,6 +46,14 @@
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
+
+        /* 步驟動畫 */
+        .step-icon {
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover .step-icon {
+            transform: scale(1.2) rotate(-5deg);
+        }
     </style>
 </head>
 <body class="blob-bg">
@@ -64,6 +72,7 @@
                 </div>
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#rules" class="bg-orange-100 hover:bg-orange-200 text-orange-600 px-4 py-2 rounded-full font-bold transition">🎮 教室規則</a>
+                    <a href="#power-tutorial" class="bg-pink-100 hover:bg-pink-200 text-pink-600 px-4 py-2 rounded-full font-bold transition">💻 開關機教學</a>
                     <a href="#courses" class="bg-blue-100 hover:bg-blue-200 text-blue-600 px-4 py-2 rounded-full font-bold transition">🌟 精選課程</a>
                     <a href="#links" class="bg-green-100 hover:bg-green-200 text-green-600 px-4 py-2 rounded-full font-bold transition">🔗 常用連結</a>
                 </div>
@@ -91,7 +100,7 @@
                 </p>
             </div>
             <div class="flex justify-center">
-                <a href="#courses" class="bg-yellow-400 hover:bg-yellow-300 text-blue-900 text-2xl font-black px-12 py-5 rounded-3xl shadow-[0_10px_0_rgb(202,138,4)] active:shadow-none active:translate-y-2 transition-all">
+                <a href="#power-tutorial" class="bg-yellow-400 hover:bg-yellow-300 text-blue-900 text-2xl font-black px-12 py-5 rounded-3xl shadow-[0_10px_0_rgb(202,138,4)] active:shadow-none active:translate-y-2 transition-all">
                     開始冒險吧！🚀
                 </a>
             </div>
@@ -127,10 +136,97 @@
                 </div>
                 <div class="bg-white p-10 rounded-[40px] shadow-xl border-b-8 border-green-400 card-pop relative">
                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-green-400 rounded-3xl rotate-6 flex items-center justify-center shadow-lg">
-                        <i class="fas fa-power-off text-white text-4xl"></i>
+                        <i class="fas fa-chair text-white text-4xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 mt-8 text-green-600">電腦要睡覺</h3>
-                    <p class="text-gray-600">下課前乖乖幫電腦關機，把桌椅收齊，當個收納小達人！💤✅</p>
+                    <h3 class="text-2xl font-bold mb-4 mt-8 text-green-600">椅子靠靠好</h3>
+                    <p class="text-gray-600">下課前乖乖把桌椅收齊，當個收納小達人！🪑✅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 開關機教學區塊 (新增) -->
+    <section id="power-tutorial" class="py-24 bg-pink-50 relative overflow-hidden">
+        <!-- 裝飾圓點 -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-0 left-0 w-64 h-64 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="kids-title text-5xl text-pink-600 mb-4">💻 喚醒與哄睡電腦寶貝</h2>
+                <p class="text-gray-600 text-lg">讓我們學習在 Windows 11 裡，正確的開機和關機魔法！</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 開機魔法 -->
+                <div class="bg-white rounded-[40px] p-8 shadow-xl border-2 border-green-200">
+                    <div class="flex items-center gap-4 mb-8 border-b-4 border-green-100 pb-4">
+                        <div class="w-16 h-16 bg-green-400 rounded-2xl flex items-center justify-center shadow-md rotate-3">
+                            <i class="fas fa-sun text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-green-600">開機魔法：喚醒電腦</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-green-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">打開螢幕</h4>
+                                <p class="text-gray-600">先找到螢幕右下角的按鈕，輕輕按一下，讓螢幕亮起來。</p>
+                            </div>
+                        </div>
+                        <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-green-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">按下主機電源</h4>
+                                <p class="text-gray-600">找到主機上最大的按鈕（通常有 <i class="fas fa-power-off text-xs mx-1"></i> 符號），按下去！</p>
+                            </div>
+                        </div>
+                         <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-green-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">耐心等待</h4>
+                                <p class="text-gray-600">看著 Windows 的窗戶圖案出現，稍等一下就進入桌面囉！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 關機魔法 -->
+                <div class="bg-white rounded-[40px] p-8 shadow-xl border-2 border-indigo-200">
+                    <div class="flex items-center gap-4 mb-8 border-b-4 border-indigo-100 pb-4">
+                        <div class="w-16 h-16 bg-indigo-400 rounded-2xl flex items-center justify-center shadow-md -rotate-3">
+                            <i class="fas fa-moon text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-indigo-600">關機魔法：哄電腦睡覺</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-indigo-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">點擊開始按鈕</h4>
+                                <p class="text-gray-600">把滑鼠游標移到螢幕<strong>正下方中間</strong>，點一下那個像四個藍色方塊的「開始」按鈕 <i class="fab fa-windows text-blue-500 mx-1"></i>。</p>
+                            </div>
+                        </div>
+                        <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-indigo-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">尋找電源符號</h4>
+                                <p class="text-gray-600">在彈出的選單右下角，找到一個圓圈加一條直線的「電源」圖示 <i class="fas fa-power-off text-gray-700 mx-1"></i>，點擊它。</p>
+                            </div>
+                        </div>
+                        <div class="step-card flex items-start gap-4 p-4 rounded-2xl hover:bg-indigo-50 transition">
+                            <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-black text-xl step-icon shadow-sm">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-1">選擇「關機」</h4>
+                                <p class="text-gray-600">在選單中點選「關機」，然後等螢幕和主機燈號完全熄滅，就完成囉！😴</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-yellow-50 p-4 rounded-2xl border border-yellow-200">
+                        <p class="text-yellow-700 text-sm font-bold"><i class="fas fa-exclamation-triangle mr-2"></i>小提醒：千萬不要直接按主機上的按鈕關機喔，電腦寶貝會受傷的！</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,8 +240,23 @@
                 <p class="text-gray-600 text-lg">每一關都有驚喜，快來挑戰吧！</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 課程卡片 1 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 課程卡片 1：滑鼠大師 -->
+                <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-teal-400">
+                    <div class="h-48 bg-teal-50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-mouse text-7xl text-teal-400 transition-transform group-hover:scale-125 duration-500"></i>
+                        <div class="absolute -bottom-2 -right-2 text-teal-100"><i class="fas fa-hand-pointer text-9xl"></i></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4">靈活滑鼠大師</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed">練習點擊、拖曳與滾動，讓你的滑鼠操控變得跟魔術一樣順手！</p>
+                        <a href="https://beye-class.github.io/mouse/" target="_blank" class="block text-center bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 rounded-2xl transition">
+                            點擊挑戰 🖱️
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 課程卡片 2 -->
                 <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-indigo-400">
                     <div class="h-48 bg-indigo-50 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-keyboard text-7xl text-indigo-400 transition-transform group-hover:scale-125 duration-500"></i>
@@ -160,7 +271,7 @@
                     </div>
                 </div>
 
-                <!-- 課程卡片 2 -->
+                <!-- 課程卡片 3 -->
                 <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-purple-400">
                     <div class="h-48 bg-purple-50 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-gamepad text-7xl text-purple-400 transition-transform group-hover:rotate-12 duration-500"></i>
@@ -174,7 +285,7 @@
                     </div>
                 </div>
 
-                <!-- 課程卡片 3 -->
+                <!-- 課程卡片 4 -->
                 <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-pink-400">
                     <div class="h-48 bg-pink-50 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-envelope-open text-7xl text-pink-400 transition-transform group-hover:-translate-y-4 group-hover:translate-x-4 duration-500"></i>
@@ -188,7 +299,7 @@
                     </div>
                 </div>
 
-                <!-- 課程卡片 4 -->
+                <!-- 課程卡片 5 -->
                 <div class="bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition group border-t-8 border-orange-400">
                     <div class="h-48 bg-orange-50 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-puzzle-piece text-7xl text-orange-400 transition-transform group-hover:scale-90 duration-500"></i>
