@@ -7,16 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@400;700&display=swap');
+        /* 引入思源黑體與台灣超可愛的開源字體「粉圓體」 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+        @import url('https://cdn.jsdelivr.net/npm/openhuninn-font@1.5.0/css/openhuninn-1.5.css');
         
         body {
-            font-family: 'Noto Sans TC', sans-serif;
+            /* 將內文主要字體也換成粉圓體 */
+            font-family: 'jf-openhuninn', 'Noto Sans TC', sans-serif;
             scroll-behavior: smooth;
             background-color: #f0f9ff;
         }
 
         .kids-title {
-            font-family: 'ZCOOL KuaiLe', 'Noto Sans TC', cursive;
+            /* 換成粉圓體，活潑可愛且繁體中文不會缺字 */
+            font-family: 'jf-openhuninn', 'Noto Sans TC', sans-serif;
         }
 
         .blob-bg {
@@ -447,7 +451,8 @@
                 <i class="fas fa-heart text-red-500 text-4xl"></i>
             </div>
             <p class="text-white text-lg font-bold mb-2">© 2026 崇德國小資訊教室</p>
-            <p class="text-gray-500 text-sm">每個小朋友都是最棒的數位創作者！✨</p>
+            <p class="text-yellow-400 text-md font-bold mb-2 tracking-wide">網頁設計與製作：bee 老師 🐝</p>
+            <p class="text-gray-500 text-sm mt-4">每個小朋友都是最棒的數位創作者！✨</p>
             <div class="mt-8 border-t border-gray-800 pt-8">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=computer" alt="機器人插圖" class="w-16 h-16 mx-auto mb-4 grayscale opacity-30">
                 <p class="text-xs text-gray-600">由 Gemini 小幫手為大家加油打氣</p>
